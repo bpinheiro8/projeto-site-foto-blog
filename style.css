@@ -15,6 +15,20 @@ body {
   font-size: 1.6rem;
 }
 
+main {
+  background: #f5f5f5;
+}
+
 .app {
   display: grid;
+  /*max-content - conteúdo vai crescendo assim que necessário - header main footer */
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
+
+.container {
+  padding: 1.6rem 3.2rem;
+  /*conteúdo para de crescer em 1120px*/
+  width: min(112rem, 100%);
+  margin: 0 auto;
 }
