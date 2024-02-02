@@ -118,13 +118,6 @@ main h1 {
   gap: 2.2rem;
 }
 
-figure img {
-  width: 100%;
-  /*para deixar a imagem proporcial*/
-  aspect-ratio: 16/8;
-  object-fit: cover;
-}
-
 .item {
   cursor: pointer;
   background: var(--color-base-white);
@@ -133,25 +126,29 @@ figure img {
   overflow: hidden;
 }
 
-.item:hover {
-  background: rgba(0, 0, 0, 0.2);
+.item img {
+  width: 100%;
+  /*para deixar a imagem proporcial*/
+  aspect-ratio: 16/8;
+  object-fit: cover;
 }
 
-figcaption h2 {
+.details h2 {
   color: var(--color-base-gray-900);
   font-size: 1.8909rem;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
-  padding: 2.2rem 2.2rem 0;
+  padding: 2.269rem 2.269rem 1.229rem;
 }
 
-figcaption span {
+.details span {
   color: var(--color-base-gray-900);
   font-size: 1.1345rem;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
+  padding: 0 2.269rem 2.269rem;
 }
 
 footer p {
