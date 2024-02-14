@@ -131,6 +131,24 @@ main h1 {
   /*para deixar a imagem proporcial*/
   aspect-ratio: 16/8;
   object-fit: cover;
+
+  /*transition-property: all;
+  transition-duration: 300ms;
+  transition-delay: 0;
+  transition-timing-function: ease-out;*/
+
+  transition: all 200ms ease-out;
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-1deg);
+}
+
+.details {
+  z-index: 1;
+  position: relative;
+  background: var(--color-base-white);
 }
 
 .details h2 {
@@ -139,7 +157,11 @@ main h1 {
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
+
   padding: 2.269rem 2.269rem 1.229rem;
+
+  z-index: 1;
+  position: relative;
 }
 
 .details span {
