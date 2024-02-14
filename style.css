@@ -69,6 +69,11 @@ nav ul li a {
   color: var(--color-base-gray-900);
 }
 
+header {
+  --startY: -100%
+  animation: move 0.2s;
+}
+
 header form {
   flex: 1;
 }
@@ -122,8 +127,13 @@ main h1 {
   cursor: pointer;
   background: var(--color-base-white);
   border-radius: 0.8rem 0.8rem 0 0;
+
   /*para que oculte o que esta transbordando da imagem*/
   overflow: hidden;
+
+
+  --delay: 0.4s;
+  animation: appear .4s var(--delay) backwards;
 }
 
 .item img {
@@ -138,6 +148,8 @@ main h1 {
   transition-timing-function: ease-out;*/
 
   transition: all 200ms ease-out;
+
+  display: block;
 }
 
 .item img:hover {
@@ -173,10 +185,32 @@ main h1 {
   padding: 0 2.269rem 2.269rem;
 }
 
+footer {
+  --startY: 100%
+  animation: move 0.2s;
+}
+
 footer p {
   text-align: center;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   padding: 1.6rem;
+}
+
+@keyframes move {
+  frpm {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1.0);
+  }
 }
